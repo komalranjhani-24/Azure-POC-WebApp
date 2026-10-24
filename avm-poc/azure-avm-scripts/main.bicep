@@ -1,4 +1,4 @@
-#param location string = resourceGroup().location
+
 param envPrefix string = 'poc'
 
 @secure()
