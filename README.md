@@ -10,3 +10,5 @@
 7. Complete the Bicep for all resources as per architecture 
 8. Convert to AVM Bicep (pending)
 9. https://bjompen.com/#/posts/azdo.mdp?id=azure-devops-managed-devops-pools & https://learn.microsoft.com/en-us/azure/devops/managed-devops-pools/prerequisites?view=azure-devops&tabs=azure-portal#configure-your-azure-subscription     : Setting up MDP doc
+10. MDP setup and configuration set - tested hello world pipeline
+11. To test bicep deployment of RG (basic) via Pipeline (pending)
