@@ -49,3 +49,11 @@ App <->  Private DNS  <-> PE <-> KV / SQL (Public access disabled)
 10. MDP setup and configuration set - tested hello world pipeline
 11. To test bicep deployment of RG (basic) via Pipeline (pending) - ENTRAID / APP RESGISTRATION WAS RESTRICTED FOR SERVICE CONNECTION CREATION - workaround created MI suing az cli and linked with SC
 12. AVM bicep script creation - reference - https://azure.github.io/Azure-Verified-Modules/indexes/bicep/bicep-resource-modules/
+
+
+
+------------------------------------------------
+Questions ?
+
+Does app service have to be in VNET ?
+
