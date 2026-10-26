@@ -21,7 +21,20 @@ EXPECTED DELIVERABLES
 • README with setup and deployment instructions.   - DONE
 
 ---------------------------------------------------------------------------------------
+Architecture Explaination:
+Platform Landing Zone - VNET, AD, Firewall, Private DNS Zones)
 
+Application Landing Zone - KV, App, SQL
+
+Vnet peering to bridge communication between both vnet and subscriptions to reduce blast radius and re-usability and reduce overheads.
+
+Current : APP, KV and SQL in VNET ; 
+APP - subnet 1, 
+KV, SQL - subnet 2
+
+App <->  Private DNS  <-> PE <-> KV / SQL (Public access disabled)
+
+-------------------------------------------------------------------------------------
 3-tier application deployment via Azure Verified Modules (Bicep)
 
 1. create a architectural basic diagram
@@ -36,3 +49,11 @@ EXPECTED DELIVERABLES
 10. MDP setup and configuration set - tested hello world pipeline
 11. To test bicep deployment of RG (basic) via Pipeline (pending) - ENTRAID / APP RESGISTRATION WAS RESTRICTED FOR SERVICE CONNECTION CREATION - workaround created MI suing az cli and linked with SC
 12. AVM bicep script creation - reference - https://azure.github.io/Azure-Verified-Modules/indexes/bicep/bicep-resource-modules/
+
+
+
+------------------------------------------------
+Questions ?
+
+Does app service have to be in VNET ?
+
