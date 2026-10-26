@@ -1,7 +1,7 @@
 targetScope = 'subscription'
 
 @description('Resource Group Name')
-param rgName string = 'rg-avm-poc'
+param rgName string = 'rg-avm-poc-pipeline'
 
 @description('Azure Region')
 param location string = 'uksouth'
