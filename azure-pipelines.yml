@@ -11,3 +11,11 @@ pool: NFUProjectAVMPool
 steps:
 - script: echo Hello, world!
   displayName: 'Run a one-line script'
+- task: AzureCLI@2
+  inputs:
+     azureSubscription: sc-infra-deploy
+     scriptType: bash
+     scriptLocation: inlineScript
+     inlineScript: |
+        echo "Logged into AZure"
+        az account show
