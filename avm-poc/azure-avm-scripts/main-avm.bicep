@@ -33,7 +33,7 @@ module serverfarms  'br/public:avm/res/web/serverfarm:0.7.0' = {
   params: {
      name: '${envPrefix}-plan'
      location: location
-     skuName: 'F1'
+     skuName: 'B1'
      skuCapacity: 1
      kind: 'linux'
      reserved: true  }
