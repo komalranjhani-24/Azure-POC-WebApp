@@ -2,6 +2,9 @@
 # Start with a minimal pipeline that you can customize to build and deploy your code.
 # Add steps that build, run tests, deploy, and more:
 # https://aka.ms/yaml
+# --------------commands ref ---------
+# az deployment sub what-if -l uksouth --template-file avm-poc/azure-avm-scripts/rg-avm.bicep
+# az deployment sub create -l uksouth --template-file avm-poc/azure-avm-scripts/rg-avm.bicep
 
 trigger:
 - main
@@ -24,5 +27,6 @@ steps:
      inlineScript: |
         echo "Logged into AZure"
         az account show
-        az deployment sub what-if -l uksouth --template-file avm-poc/azure-avm-scripts/rg-avm.bicep
-        az deployment sub create -l uksouth --template-file avm-poc/azure-avm-scripts/rg-avm.bicep
+        az deployment group what-if --resource-group rg-avm-poc --template-file avm-poc/azure-avm-scripts/main-avm.bicep
+        az deployment group create --resource-group rg-avm-poc --template-file avm-poc/azure-avm-scripts/main-avm.bicep
+        
