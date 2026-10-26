@@ -11,6 +11,11 @@ pool: NFUProjectAVMPool
 steps:
 - script: echo Hello, world!
   displayName: 'Run a one-line script'
+
+- bash: |
+    curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash
+    az --version
+
 - task: AzureCLI@2
   inputs:
      azureSubscription: sc-infra-deploy
