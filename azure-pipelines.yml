@@ -24,3 +24,5 @@ steps:
      inlineScript: |
         echo "Logged into AZure"
         az account show
+        az deployment sub what-if -l uksouth --template-file azure-avm-scripts/rg-avm.bicep
+        az deployment sub create -l uksouth --template-file azure-avm-scripts/rg-avm.bicep
