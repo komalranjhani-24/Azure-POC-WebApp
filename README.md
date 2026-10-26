@@ -1,4 +1,27 @@
 # Azure-POC-WebApp
+
+Requirements:
+• Create a Git repository with a clean folder and file structure. - DONE
+• Use Azure Verified Modules (AVM) wherever applicable. - DONE
+• Create reusable Bicep modules and parameter files following best practices.
+• Set up Azure DevOps Managed DevOps Pools using Microsoft-managed agents with virtual network connectivity. - .5 DONE
+• Configure secure authentication and appropriate Azure permissions. - DONE
+• Create reusable Azure DevOps YAML pipelines and templates. .5 DONE
+• Implement Bicep linting, validation, what-if analysis and deployment stages. - .5 DONE
+• Deploy an Azure Web App, Azure SQL Database and Azure Key Vault using Bicep. - .5 DONE
+• Test the pipeline and verify successful deployments.   - DONE
+• Document the setup and process for deploying additional Azure resources. - DONE
+ 
+EXPECTED DELIVERABLES
+ 
+• Git repository with complete source code and folder structure.  - DONE
+• Working Azure DevOps pipeline using the managed agent pool.   - DONE
+• Reusable Bicep modules using AVM wherever applicable.   - DONE
+• Basic architecture diagram.    - DONE
+• README with setup and deployment instructions.   - DONE
+
+---------------------------------------------------------------------------------------
+
 3-tier application deployment via Azure Verified Modules (Bicep)
 
 1. create a architectural basic diagram
