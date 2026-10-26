@@ -20,6 +20,7 @@ module vnet   'br/public:avm/res/network/virtual-network:0.10.2' =  {
       {
         name: 'app-subnet'
         addressPrefix: '10.0.1.0/27'
+        delegation: 'Microsoft.Web/serverFarms'
       }
       {
         name: 'pe-subnet'
@@ -50,7 +51,3 @@ module site 'br/public:avm/res/web/site:0.24.0' =  {
     }
   }
 }
-
-
-
-
