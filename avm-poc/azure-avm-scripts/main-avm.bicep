@@ -29,5 +29,16 @@ module vnet   'br/public:avm/res/network/virtual-network:0.10.2' =  {
   }
 }
 
+module serverfarms  'br/public:avm/res/web/serverfarm:0.7.0' = {
+  params: {
+     name: '${envPrefix}-plan'
+     location: location
+     skuName: 'B1'
+     skuCapacity: 1
+     kind: 'linux'
+     reserved: true  }
+}
+
+
 
 
