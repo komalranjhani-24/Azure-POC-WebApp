@@ -39,6 +39,18 @@ module serverfarms  'br/public:avm/res/web/serverfarm:0.7.0' = {
      reserved: true  }
 }
 
+module site 'br/public:avm/res/web/site:0.24.0' =  {
+  params: {
+    name: 'dev-app'
+    kind: 'app'
+    serverFarmResourceId: serverfarms.outputs.resourceId
+    virtualNetworkSubnetResourceId: vnet.outputs.subnetResourceIds[0]
+    siteConfig: {
+      linuxFxVersion: 'DOTNETCORE|8.0'
+    }
+  }
+}
+
 
 
 
