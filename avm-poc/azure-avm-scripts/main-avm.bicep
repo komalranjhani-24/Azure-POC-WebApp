@@ -73,6 +73,7 @@ module db 'br/public:avm/res/sql/server/database:0.3.1' = {
     location: location
     sku: {
       name: 'Basic'
+      tier: 'Basic'
     }
   }
 }
