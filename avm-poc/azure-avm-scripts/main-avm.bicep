@@ -70,7 +70,7 @@ module db 'br/public:avm/res/sql/server/database:0.3.1' = {
     name: '${sql.outputs.name}-db'
     serverName: sql.outputs.name
     location: location
-    zoneRedundant: false
+    availabilityZone: 0
     maxSizeBytes: 2147483648
     sku: {
       name: 'Basic'
