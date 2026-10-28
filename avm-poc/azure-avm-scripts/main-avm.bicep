@@ -67,9 +67,9 @@ module sql 'br/public:avm/res/sql/server:0.22.1' =  {
 
 module db 'br/public:avm/res/sql/server/database:0.3.1' = {
   params: {
-    name: '${sql.name}-db'
+    name: '${sql.outputs.name}-db'
     availabilityZone: 1
-    serverName: sql.name
+    serverName: sql.outputs.name
     location: location
     sku: {
       name: 'Basic'
