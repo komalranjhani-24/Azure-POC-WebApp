@@ -7,6 +7,10 @@ param envPrefix string = 'dev'
 @description('Location')
 param location string = resourceGroup().location
 
+@secure()
+param sqlAdminPassword string
+
+
 module vnet   'br/public:avm/res/network/virtual-network:0.10.2' =  {
   params: {
     name: '${envPrefix}-vnet'
@@ -49,5 +53,35 @@ module site 'br/public:avm/res/web/site:0.24.0' =  {
     siteConfig: {
       linuxFxVersion: 'DOTNETCORE|8.0'
     }
+  }
+}
+
+module sql 'br/public:avm/res/sql/server:0.22.1' =  {
+  params: {
+    name: '${envPrefix}-sql-server-poc' 
+    location: location
+    administratorLogin: 'sqladmin'
+    administratorLoginPassword: sqlAdminPassword
+  }
+}
+
+module db 'br/public:avm/res/sql/server/database:0.3.1' = {
+  params: {
+    name: '${sql.name}-db'
+    availabilityZone: 1
+    serverName: sql.name
+    location: location
+    sku: {
+      name: 'Basic'
+    }
+  }
+}
+
+module kv 'br/public:avm/res/key-vault/vault:0.14.2' = {
+  params: {
+    name: 'kv-${resourceGroup().name}'
+    location: location
+    sku: 'standard'
+    enableRbacAuthorization: true  
   }
 }
