@@ -68,7 +68,6 @@ module sql 'br/public:avm/res/sql/server:0.22.1' =  {
 module db 'br/public:avm/res/sql/server/database:0.3.1' = {
   params: {
     name: '${sql.outputs.name}-db'
-    availabilityZone: 1
     serverName: sql.outputs.name
     location: location
     maxSizeBytes: 2147483648
