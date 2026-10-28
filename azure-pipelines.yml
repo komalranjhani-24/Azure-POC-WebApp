@@ -27,6 +27,6 @@ steps:
      inlineScript: |
         echo "Logged into AZure"
         az account show
-        az deployment group what-if --resource-group rg-avm-poc --template-file avm-poc/azure-avm-scripts/main-avm.bicep
-        az deployment group create --resource-group rg-avm-poc --template-file avm-poc/azure-avm-scripts/main-avm.bicep
+        az deployment group what-if --resource-group rg-avm-poc --template-file avm-poc/azure-avm-scripts/main-avm.bicep -sqlAdminPassword 'test@1234'
+        az deployment group create --resource-group rg-avm-poc --template-file avm-poc/azure-avm-scripts/main-avm.bicep -sqlAdminPassword 'test@1234'
         
