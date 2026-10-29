@@ -73,7 +73,7 @@ module db 'br/public:avm/res/sql/server/database:0.3.1' = {
     availabilityZone: 1
     maxSizeBytes: 2147483648
     sku: {
-        name: 'S1'
+        name: 'S0'
         tier: 'Standard'
     }
   }
